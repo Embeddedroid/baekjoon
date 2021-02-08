@@ -4,7 +4,7 @@
 typedef struct {
 	int max;
 	int num;
-	char *stk;
+	int *stk;
 }Stack;
 void initialize(Stack *s, int x)
 {
@@ -44,7 +44,7 @@ int main(void)
 	int t;
 	while (1)
 	{
-		char ch[101];
+		char ch[102];
 		initialize(&s, 101);
 		t = 0;
 		fgets(ch, 101, stdin);
@@ -101,7 +101,7 @@ int main(void)
 					pop(&s);
 			}
 			else
-				push(&s, ch[t]);
+				;
 			t++;
 		}
 		if (t == 0)
